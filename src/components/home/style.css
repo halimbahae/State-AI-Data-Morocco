@@ -1,0 +1,119 @@
+
+  
+  ol, ul,li, menu {
+    list-style: none;
+    list-style: none;
+  }
+  
+
+
+  
+  /* variables */
+  :root {
+    /* colors */
+    --sg0-color-primary-hsl: 250, 84%, 54%;
+    --sg0-color-bg-hsl: 0, 0%, 100%;
+    --sg0-color-contrast-high-hsl: 230, 7%, 23%;
+    --sg0-color-contrast-higher-hsl: 230, 13%, 9%;
+    --sg0-color-bg-light-hsl: 0, 0%, 100%;
+  
+    /* spacing */
+    --sg0-space-sm: 0.75rem;
+    --sg0-space-md: 1.25rem;
+  }
+  
+  @media(min-width: 64rem){
+    :root {
+      /* spacing */
+      --sg0-space-sm: 1.125rem;
+      --sg0-space-md: 2rem;
+    }
+  }
+  
+  /* component */
+  .stack-cards {
+    --stack-cards-gap: var(--sg0-space-sm);
+    --stack-cards-item-ratio: 2/1;
+    width: 100%;
+  }
+  
+  .stack-cards__item {
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--sg0-space-md);
+    height: 0;
+    padding-bottom: calc(100%/(var(--stack-cards-item-ratio)));
+    -webkit-transform-origin: center top;
+            transform-origin: center top;
+  }
+  .stack-cards__item > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  /* utility classes */
+  .sg0-overflow-hidden {
+    overflow: hidden;
+  }
+  
+  .sg0-shadow-md {
+    box-shadow: 
+      0 6px 2px rgba(0, 0, 0, 0.05), 
+      0 10px 8px rgba(0, 0, 0, 0.12), 
+      0 20px 40px rgba(0, 0, 0, 0.18);
+  }
+  
+  .sg0-radius-lg {
+    border-radius: 0.5em;
+  }
+  
+  .sg0-bg {
+    --sg0-bg-o: 1;
+    background-color: hsla(var(--sg0-color-bg-hsl), var(--sg0-bg-o, 1));
+  }
+  
+  .sg0-flex-center {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sg0-flex {
+    display: flex;
+  }
+  
+  :where(.sg0-inner-glow) {
+    position: relative;
+  }
+  
+  .sg0-inner-glow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 0.5px 2px hsla(115, 100%, 50%, 0.223);
+  }
+  
+  .sg0-bg-light {
+    --sg0-bg-o: 1;
+    background-color: hsla(var(--sg0-color-bg-light-hsl), var(--sg0-bg-o, 1));
+  }
+  .stack-cards__item {
+    transform: translateX(-50%);
+    transition: transform 0.5s ease-in-out;
+    background-color: rgb(221, 221, 221);
+  }
+  
+  .stack-cards__item.active {
+    transform: translateX(0);
+  }
+  

@@ -1,0 +1,22 @@
+---
+export interface Props {
+  label: string;
+  href: string;
+  external?: boolean;
+  isActive?: boolean;
+}
+
+const { label, href, external = false, isActive = false } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`block cursor-pointer items-center pt-2 border-b-2 border-dashed pb-0 transition-colors duration-200 ${
+    isActive
+      ? "text-white"
+      : "text-secondary"
+  }`}
+  target={external ? "_blank" : undefined}
+>
+  {label}
+</a>

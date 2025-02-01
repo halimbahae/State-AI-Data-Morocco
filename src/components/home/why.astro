@@ -1,0 +1,113 @@
+---
+import "./style.css";
+---
+
+<div class="relative w-screen z-0">
+  <div class="mx-auto py-20 w-full max-w-screen-xl px-4 relative z-[99]">
+    <div class="w-20 mb-10 mx-auto border-b-4 border-emerald-700"></div>
+    <h2 class="text-xl text-white font-bold mb-8 text-center">
+      Why Join Our Awesome Survey?
+    </h2>
+    <div class="stack-cards js-stack-cards">
+      <li
+        class="stack-cards__item sg0-bg-light sg0-radius-lg sg0-inner-glow sg0-shadow-md js-stack-cards__item"
+      >
+        <div
+          class="sg0-flex sg0-flex-center flex flex-col items-center justify-center p-20 gap-20"
+        >
+          <div class="text-primary mr-4 text-4xl">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-14 h-14"
+            >
+              <path d="M16.5 7.5h-9v9h9v-9z"></path>
+              <path
+                fill-rule="evenodd"
+                d="M8.25 2.25A.75.75 0 019 3v.75h2.25V3a.75.75 0 011.5 0v.75H15V3a.75.75 0 011.5 0v.75H18A.75.75 0 0118 9h-.75v2.25H18a.75.75 0 010 1.5h-.75V15H18a.75.75 0 010 1.5h-.75v.75a3 3 0 01-3 3h-.75V21a.75.75 0 01-1.5 0v-.75h-2.25V21a.75.75 0 01-1.5 0v-.75H9V21a.75.75 0 01-1.5 0v-.75h-.75a3 3 0 01-3-3v-.75H3A.75.75 0 013 15h.75v-2.25H3a.75.75 0 010-1.5h.75V9H3a.75.75 0 010-1.5h.75v-.75a3 3 0 013-3h.75V3a.75.75 0 01.75-.75zM6 6.75A.75.75 0 016.75 6h10.5a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75V6.75z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+
+          <p class="text-black text-3xl">
+            Be part of creating a global report that sheds light on Morocco's
+            development scene. Your insights matter!
+          </p>
+        </div>
+        </li>
+        <li
+        class="bg-gradient-to-t stack-cards__item sg0-bg-light sg0-radius-lg sg0-inner-glow sg0-shadow-md js-stack-cards__item"
+      >
+        <div
+          class="sg0-flex sg0-flex-center flex flex-col items-center justify-center p-20 gap-20"
+        >
+          <div class="text-primary mr-4 text-4xl">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-14 h-14"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+
+          <p class="text-black text-3xl">
+            Help local communities make informed decisions about learning paths
+            and create a bigger impact together.
+          </p>
+        </div>
+        </li>
+        <li
+        class="bg-gradient-to-t stack-cards__item sg0-bg-light sg0-radius-lg sg0-inner-glow sg0-shadow-md js-stack-cards__item"
+      >
+      <div
+          class="sg0-flex sg0-flex-center flex flex-col items-center justify-center p-20 gap-20"
+        >
+        <div class="text-primary mr-4 text-4xl">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-14 h-14"
+            >
+              <path
+                d="M12 .75a8.25 8.25 0 00-4.135 15.39c.686.398 1.115 1.008 1.134 1.623a.75.75 0 00.577.706c.352.083.71.148 1.074.195.323.041.6-.218.6-.544v-4.661a6.714 6.714 0 01-.937-.171.75.75 0 11.374-1.453 5.261 5.261 0 002.626 0 .75.75 0 11.374 1.452 6.712 6.712 0 01-.937.172v4.66c0 .327.277.586.6.545.364-.047.722-.112 1.074-.195a.75.75 0 00.577-.706c.02-.615.448-1.225 1.134-1.623A8.25 8.25 0 0012 .75z"
+              ></path>
+            </svg>
+          </div>
+
+          <p class="text-black text-3xl">
+            Discover what others are thinking and find exciting new tools and
+            solutions to level up your work.
+          </p>
+        
+        </div>
+      </li>
+    </div>
+  </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".stack-cards__item");
+
+  function checkScroll() {
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.8 && rect.bottom > 0) {
+        card.classList.add("active");
+      } else {
+        card.classList.remove("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkScroll);
+  checkScroll(); // Run once on page load
+});
+
+</script>
